@@ -1,0 +1,333 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    --font-size: 1.6rem;
+    --font-family: 'MS Sans Serif', sans-serif;
+    --font-weight: 100;
+    --h1-color-font: white;
+}
+
+body {
+    font-size: var(--font-size);
+    font-family: var(--font-family);
+    font-weight: var(--font-weight);
+
+    background: #1c8686;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+body main .main-containers {
+    background: #dcdcdc;
+    border: 2px solid #808080;
+    border-top-color: #ffffff;
+    border-left-color: #ffffff;
+    box-shadow: inset -1px -1px #181616, inset 1px 1px #ffffff;
+    width: auto;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 1rem;
+}
+
+input {
+    padding-left: 2px;
+}
+
+.main-nav-bar-style {
+    padding: .4rem;
+    background: linear-gradient(150deg, #0000ff, #2200ff45);
+    color: white;
+    align-items: center;
+    display: flex;
+}
+
+.main-text-bar-style {
+    margin-left: .6rem;
+}
+
+.main-nav-bar-style .close-button-style {
+    background: #dcdcdc;
+    border: 2px solid #808080;
+    border-top-color: #ffffff;
+    border-left-color: #ffffff;
+    box-shadow: inset -1px -1px #181616, inset 1px 1px #ffffff;
+    color: black;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    font-size: 15px;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.main-second-container form {
+    display: flex;
+    gap: 7rem;
+}
+
+.form-location-container {
+    margin-top: .5rem;
+    margin-left: .5rem;
+}
+
+.form-location-container input {
+    margin-top: .5rem;
+    display: flex;
+    border: 1px solid #ffffff;
+    border-top-color: #1d1616;
+    border-left-color: #ffffff;
+    box-shadow: inset 1px 1px #2e2b2b, inset 1px 1px #ffffff;
+}
+
+#consultIp,
+#clearIp {
+    padding: .5rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #000000;
+    border-top-color: #ffffff;
+    border-left-color: #ffffff;
+    box-shadow: inset -1px -1px #181616, inset 1px 1px #ffffff;
+    cursor: pointer;
+    width: 8.5rem;
+    align-items: center;
+}
+
+#consultIp .fa-spinner {
+    margin-left: 8px;
+}
+
+.form-location-second-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.form-location-second-container input {
+    border: 1px solid #ffffff;
+    border-top-color: #1d1616;
+    border-left-color: #ffffff;
+    box-shadow: inset 1px 1px #2e2b2b, inset 1px 1px #ffffff;
+    margin-right: .5rem;
+}
+
+.form-location-seconds-container-country,
+.form-location-seconds-container-city,
+.form-location-seconds-container-region,
+.form-location-seconds-container-country_population,
+.form-location-seconds-container-latitude,
+.form-location-seconds-container-longitude,
+.form-location-seconds-container-ipaddress {
+    display: flex;
+    gap: .4rem;
+    align-items: center;
+
+}
+
+.form-location-container-network {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4.2rem;
+    transform: scale(2);
+
+}
+
+.alert {
+    width: 100%;
+    height: 30px;
+    background: linear-gradient(150deg, #ff0808, #b94e5a45);
+    border: 2px solid #050505;
+    border-top-color: #cfcece;
+    border-left-color: #000000;
+    box-shadow: inset 1px 1px #ffffff, inset 1px 1px #000000;
+    margin-top: 0.1px;
+    display: none;
+
+    animation: slideDown 1s;
+}
+
+.alertInvalidIp {
+    width: 100%;
+    height: 30px;
+    background: linear-gradient(150deg, #ff0808, #b94e5a45);
+    border: 2px solid #050505;
+    border-top-color: #cfcece;
+    border-left-color: #000000;
+    box-shadow: inset 1px 1px #ffffff, inset 1px 1px #000000;
+    margin-top: 0.1px;
+    display: none;
+
+    animation: slideDown 1s;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translate(100%);
+        opacity: 0;
+    }
+}
+
+.alert span {
+    display: flex;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    margin-top: 3.5px;
+}
+
+.alertInvalidIp span {
+    display: flex;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    margin-top: 3.5px;
+}
+
+#flag {
+    transform: scale(0.5);
+}
+
+@media (max-width: 471px) {
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-location-container-network {
+        margin-right: 30px;
+    }
+
+    .contain-form-all-info-inputs {
+        margin-left: 6px;
+    }
+
+    .main-text-bar-style {
+        font-size: 1.3rem;
+        margin-right: 0.7rem;
+    }
+}
+
+@media (max-width: 300px) {
+    .alert {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 282px) {
+    .alert {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 246px) {
+    .alert {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 259px) {
+    .main-text-bar-style {
+        font-size: 1.1rem;
+        margin-right: 0.7rem;
+    }
+
+    input {
+        width: 150px;
+    }
+
+    #consultIp,
+    #clearIp {
+        width: 7.3rem;
+    }
+}
+
+@media (max-width: 235px) {
+    .main-text-bar-style {
+        font-size: 1rem;
+        margin-right: 0.7rem;
+    }
+
+    input {
+        width: 150px;
+    }
+}
+
+@media (max-width: 223px) {
+    .main-text-bar-style {
+        font-size: 0.8rem;
+    }
+
+    input {
+        width: 130px;
+    }
+
+    #consultIp,
+    #clearIp {
+        width: 6.3rem;
+    }
+}
+
+@media (max-width: 200px) {
+    .main-text-bar-style {
+        font-size: 0.8rem;
+        font-weight: bold;
+    }
+
+    input {
+        width: 120px;
+    }
+
+    #consultIp,
+    #clearIp {
+        width: 5.8rem;
+    }
+}
+
+@media (max-width: 198px) {
+    input {
+        width: 110px;
+    }
+
+    #consultIp,
+    #clearIp {
+        width: 5.4rem;
+    }
+
+    .main-text-bar-style {
+        font-size: 0.7rem;
+        font-weight: bold;
+    }
+}
+
+@media (max-width: 185px) {
+    input {
+        width: 100px;
+    }
+
+    #consultIp,
+    #clearIp {
+        width: 5.4rem;
+    }
+
+    main {
+        padding-left: -20px;
+    }
+
+    .main-text-bar-style {
+        font-size: 0.6rem;
+        font-weight: bold;
+    }
+
+}

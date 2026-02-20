@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Geolocation</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts/main.js" type="module" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <div id="displayAlert" class="alert">
+        <span>Enter a valid IP address before consulting</span>
+    </div>
+
+    <div id="displayAlertInvalidIp" class="alertInvalidIp">
+        <span>Invalid IP</span>
+    </div>
+    <main>
+        <div class="main-containers">
+            <div class="main-nav-bar-style">
+                <img class="main-icon-style" src="images/world-1.png" alt="">
+                <p class="main-text-bar-style">Welcome to IP Geolocation</p>
+                <p class="close-button-style">&#10005;</p>
+            </div>
+            <div class="main-second-container">
+                <form>
+                    <div class="form-location-container">
+                        <label for="ipLocalization">Insert IP</label>
+                        <input type="text" id="ipLocalization">
+                        <button id="consultIp">Search</button>
+                        <button id="clearIp">Clear</button>
+                        <div class="form-location-container-network">
+                            <img src="images/network_cool_two_pcs-0.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="contain-form-all-info-inputs">
+
+                        <div class="form-location-second-container">
+                            <div class="form-location-seconds-container-country">
+                                <img src="images/globe_map-1.png" alt="">
+                                <input id="country" type="text">
+                            </div>
+
+                            <div class="form-location-seconds-container-region">
+                                <img src="images/internet_connection_wiz-1.png" alt="">
+                                <input id="region" type="text">
+                            </div>
+
+                            <div class="form-location-seconds-container-city">
+                                <img src="images/kodak_imaging-1.png" alt="">
+                                <input id="city" type="text" placeholder="">
+                            </div>
+
+                            <div class="form-location-seconds-container-country_population">
+                                <img src="images/address_book_users (1).png" alt="">
+                                <input id="country_population" type="text">
+                            </div>
+
+                            <div class="form-location-seconds-container-utc_offset">
+                                <img src="images/clock-0.png" alt="">
+                                <input id="utc_offset" type="text">
+                            </div>
+                            <div class="form-location-seconds-latitude">
+                                <img src="images/netshow-0.png" alt="">
+                                <input id="latitude" type="text">
+                            </div>
+                            <div class="form-location-seconds-longitude">
+                                <img src="images/netshow-0.png" alt="">
+                                <input id="longitude" type="text">
+                            </div>
+
+                            <div class="form-location-seconds-ipaddress">
+                                <img src="images/network_drive-1.png" alt="">
+                                <input id="ipaddress" type="text">
+                            </div>
+                            <img id="flag" src="" alt="">
+                        </div>
+                    </div>
+            </div>
+
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>
